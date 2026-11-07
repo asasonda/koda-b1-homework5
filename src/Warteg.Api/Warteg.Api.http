@@ -1,0 +1,69 @@
+@base = http://localhost:5007
+
+
+### get
+GET {{base}}/api/v1/category
+Accept: application/json
+
+### post
+POST {{base}}/api/v1/category
+Accept: application/json
+Content-Type: application/json
+
+{
+    "categoryCode": "C002",
+    "name" : "Minuman"
+}
+
+### put
+PUT {{base}}/api/v1/category/C001
+Accept: application/json
+Content-Type: application/json
+
+{
+    "categoryCode": "C001",
+    "name" : "Makanan"
+}
+
+### delete
+DELETE {{base}}/api/v1/category/C002
+Accept: application/json
+Content-Type: application/json
+
+
+
+
+### get menu
+GET {{base}}/api/v1/menu/menu-category
+Accept: application/json
+
+### post menu
+POST {{base}}/api/v1/menu
+Accept: application/json
+Content-Type: application/json
+
+{
+    "menuCode": "M001",
+    "name": "Telur Dadar",
+    "price" : 10000,
+    "stock": 10,
+    "categoryId": 1
+}
+
+### put menu
+PUT {{base}}/api/v1/menu/M001
+Accept: application/json
+Content-Type: application/json
+
+{
+    "menuCode": "M001",
+    "name": "Telur Dadar Baldo",
+    "price" : 10000,
+    "stock": 10,
+    "categoryId": 1
+}
+
+### delete
+DELETE {{base}}/api/v1/menu/M001
+Accept: application/json
+Content-Type: application/json
